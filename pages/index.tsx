@@ -1,43 +1,43 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { Product } from '../types';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import styles from '../styles/Home.module.css';
 
 const products: Product[] = [
-  { id: 1, name: 'Product 1', price: 100, description: 'This is product 1', image: 'https://via.placeholder.com/150' },
-  { id: 2, name: 'Product 2', price: 200, description: 'This is product 2', image: 'https://via.placeholder.com/150' },
-  { id: 3, name: 'Product 3', price: 300, description: 'This is product 3', image: 'https://via.placeholder.com/150' },
+  { id: 1, name: 'Eco Retreat Experience', price: 450, description: 'A soulful journey into nature', image: '/images/retreat.jpg' },
+  { id: 2, name: 'Yoga & Meditation', price: 350, description: 'Find your inner peace', image: '/images/yoga.jpg' },
+  { id: 3, name: 'Nature Immersion', price: 420, description: 'Connect with the elements', image: '/images/nature.jpg' },
 ];
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Ganarana - Reconnect with Nature</title>
-        <meta name="description" content="Eco-conscious retreat in Ibiza" />
+        <title>Maatrika home of the food</title>
+        <meta name="description" content="Homemade food products" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      
-      <Navbar />
       
       <main className={styles.main}>
         <h1 className={styles.pageTitle}>Our Products</h1>
         <div className={styles.grid}>
           {products.map(product => (
-            <Link href={`/products/${product.id}`} key={product.id}>
+            <Link href={`/product`} key={product.id}>
               <div className={styles.card}>
-                <img src={product.image} alt={product.name} className={styles.productImage} />
+                <div className={styles.productImagePlaceholder}>
+                  <div className={styles.placeholderCross}>✕</div>
+                </div>
                 <h2 className={styles.productName}>{product.name}</h2>
-                <p className={styles.productPrice}>${product.price}</p>
+                <p className={styles.productPrice}>€{product.price}</p>
               </div>
             </Link>
           ))}
         </div>
       </main>
-      
-      <Footer />
+      <div className={styles.mottoBanner}>
+          <h2 className={styles.mottoText}>Reconnect with Nature. Find Your Balance.</h2>
+          <p className={styles.mottoSubtext}>Eco-conscious retreats for mind, body & soul</p>
+        </div>
     </>
   );
 }

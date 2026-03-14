@@ -7,7 +7,7 @@ export default function Footer() {
         <div className={styles.leftSection}>
           <div className={styles.logo}>
             <div className={styles.logoIcon}>✦</div>
-            <div className={styles.logoText}>GANARANA</div>
+            <div className={styles.logoText}>MAATRIKA</div>
           </div>
         </div>
         
@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
       
       <div className={styles.bottom}>
-        <p>© 2024 GANARANA IBIZA</p>
+        <p>© 2024 MAATRIKA IBIZA</p>
         <p>SITE BY VISUAL STUDIO</p>
       </div>
     </footer>

@@ -15,15 +15,10 @@
   align-items: center;
 }
 
-.navLeft,
 .navRight {
   display: flex;
   gap: 2.5rem;
-  flex: 1;
-}
-
-.navRight {
-  justify-content: flex-end;
+  align-items: center;
 }
 
 .navLink {
