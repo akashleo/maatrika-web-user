@@ -62,9 +62,10 @@
 }
 
 .mottoBanner {
- padding: 4rem 2rem;
+ padding: 5rem 2rem;
   max-width: 100%;
   margin: 0 auto;
+  text-align: center;
   background-color: var(--pink);
   height: 500px;
 }

@@ -1,9 +1,11 @@
 import Link from 'next/link';
-import { useCart } from '../context/CartContext';
+import { useAppSelector } from '../store/hooks';
 import styles from '../styles/Navbar.module.css';
+import cartIcon from '../assets/shopping-cart.png';
+import Image from 'next/image';
 
 export default function Navbar() {
-  const { cartItems } = useCart();
+  const cartItems = useAppSelector(state => state.cart.cartItems);
   const itemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
   return (
     <nav className={styles.navbar}>
@@ -13,12 +15,9 @@ export default function Navbar() {
         </Link>
         
         <div className={styles.navRight}>
-          <Link href="/" className={styles.navLink}>OUR STORY</Link>
-          <Link href="/about" className={styles.navLink}>RETREATS</Link>
-          <Link href="/about" className={styles.navLink}>PRIVATE HIRE</Link>
-          <Link href="/about" className={styles.navLink}>CONTACT</Link>
+          <Link href="/about" className={styles.navLink}>OUR STORY</Link>
           <Link href="/cart" className={styles.cartLink}>
-            Cart
+            <Image src={cartIcon} alt="Cart" width={24} height={24} style={{ backgroundImage: `url("../assets/shopping-cart.png")` }} />
             {itemCount > 0 && <span className={styles.cartCount}>{itemCount}</span>}
           </Link>
         </div>

@@ -1,12 +1,18 @@
 import styles from '../styles/Footer.module.css';
+import { Bungee } from 'next/font/google';
+
+const bungee = Bungee({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${bungee.className}`}>
       <div className={styles.container}>
         <div className={styles.leftSection}>
           <div className={styles.logo}>
-            <div className={styles.logoIcon}>✦</div>
             <div className={styles.logoText}>MAATRIKA</div>
           </div>
         </div>

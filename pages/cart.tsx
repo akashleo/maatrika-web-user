@@ -1,10 +1,12 @@
-import { useCart } from '../context/CartContext';
+import { useAppSelector, useAppDispatch } from '../store/hooks';
+import { removeFromCart, updateQuantity } from '../store/cartSlice';
 import styles from '../styles/Cart.module.css';
 import Link from 'next/link';
 import Head from 'next/head';
 
 const CartPage = () => {
-  const { cartItems, removeFromCart, updateQuantity } = useCart();
+  const cartItems = useAppSelector(state => state.cart.cartItems);
+  const dispatch = useAppDispatch();
 
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -36,10 +38,10 @@ const CartPage = () => {
                     type="number"
                     value={item.quantity}
                     min="1"
-                    onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                    onChange={(e) => dispatch(updateQuantity({ productId: item.id, quantity: parseInt(e.target.value) }))}
                     className={styles.quantityInput}
                   />
-                  <button onClick={() => removeFromCart(item.id)} className={styles.removeButton}>Remove</button>
+                  <button onClick={() => dispatch(removeFromCart(item.id))} className={styles.removeButton}>Remove</button>
                 </div>
                 <p className={styles.itemTotal}>€{(item.price * item.quantity).toFixed(2)}</p>
               </div>
