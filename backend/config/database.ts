@@ -10,3 +10,4 @@ const sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://user:pas
 });
 
 export default sequelize;
+

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import Cart from '../models/cart';
+import Cart from '../models/cart.js';
 
 export const getCartItems = async (req: Request, res: Response) => {
   try {

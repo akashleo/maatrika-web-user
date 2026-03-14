@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import Review from '../models/reviews';
+import Review from '../models/reviews.js';
 
 export const getReviewsForProduct = async (req: Request, res: Response) => {
   try {
