@@ -16,6 +16,7 @@ export default function Navbar() {
         
         <div className={styles.navRight}>
           <Link href="/about" className={styles.navLink}>OUR STORY</Link>
+          <Link href="/login" className={styles.authButton}>Login / Sign Up</Link>
           <Link href="/cart" className={styles.cartLink}>
             <Image src={cartIcon} alt="Cart" width={24} height={24} style={{ backgroundImage: `url("../assets/shopping-cart.png")` }} />
             {itemCount > 0 && <span className={styles.cartCount}>{itemCount}</span>}

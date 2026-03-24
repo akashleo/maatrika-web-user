@@ -1,0 +1,126 @@
+.main {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--vanilla);
+}
+
+.container {
+  background-color: var(--blush);
+  border: 1px solid var(--copper);
+  border-radius: 8px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 12px rgba(167, 95, 55, 0.1);
+}
+
+.title {
+  color: var(--copper);
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  color: var(--black);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--tan);
+  border-radius: 4px;
+  background-color: var(--vanilla);
+  color: var(--black);
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--copper);
+}
+
+.input::placeholder {
+  color: var(--pink);
+}
+
+.submitButton {
+  background-color: var(--copper);
+  color: var(--vanilla);
+  padding: 0.875rem 1.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+}
+
+.toggleText {
+  color: var(--black);
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.toggleButton {
+  background: none;
+  color: var(--copper);
+  font-weight: 600;
+  margin-left: 0.25rem;
+  text-decoration: underline;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.toggleButton:hover {
+  color: var(--pink);
+}
+
+.backLink {
+  display: block;
+  text-align: center;
+  color: var(--copper);
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  transition: opacity 0.3s;
+}
+
+.backLink:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}

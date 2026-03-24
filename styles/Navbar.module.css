@@ -68,6 +68,21 @@
   opacity: 0.7;
 }
 
+.authButton {
+  background-color: var(--copper);
+  color: var(--vanilla);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s;
+}
+
+.authButton:hover {
+  opacity: 0.9;
+}
+
 .cartCount {
   background-color: #0070f3;
   color: white;
