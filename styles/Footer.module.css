@@ -118,14 +118,37 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
   .container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .leftSection, 
+  .centerSection, 
+  .rightSection {
+    align-items: center;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .input, .button {
+    width: 100%;
   }
   
   .bottom {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     text-align: center;
+    padding-top: 1.5rem;
   }
 }

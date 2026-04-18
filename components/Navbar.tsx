@@ -11,12 +11,16 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <div className={styles.logoText}>maatrika</div>
+          <div className={styles.logoTextFull}>maatrika</div>
+          <div className={styles.logoTextMobile}>m</div>
         </Link>
         
         <div className={styles.navRight}>
-          <Link href="/about" className={styles.navLink}>OUR STORY</Link>
-          <Link href="/login" className={styles.authButton}>Login / Sign Up</Link>
+          <Link href="/about" className={`${styles.navLink} ${styles.hideMobile}`}>OUR STORY</Link>
+          <Link href="/login" className={styles.authButton}>
+            <span className={styles.authButtonText}>Login / Sign Up</span>
+            <span className={styles.authButtonEmoji}>👤</span>
+          </Link>
           <Link href="/cart" className={styles.cartLink}>
             <Image src={cartIcon} alt="Cart" width={24} height={24} style={{ backgroundImage: `url("../assets/shopping-cart.png")` }} />
             {itemCount > 0 && <span className={styles.cartCount}>{itemCount}</span>}

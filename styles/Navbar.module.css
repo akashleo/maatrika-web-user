@@ -45,11 +45,19 @@
   font-size: 1.5rem;
 }
 
-.logoText {
+.logoTextFull {
   color: var(--copper);
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 2px;
+}
+
+.logoTextMobile {
+  display: none;
+  color: var(--copper);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: lowercase;
 }
 
 .cartLink {
@@ -77,6 +85,14 @@
   font-weight: 600;
   letter-spacing: 0.5px;
   transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authButtonEmoji {
+  display: none;
+  font-size: 1.2rem;
 }
 
 .authButton:hover {
@@ -106,7 +122,29 @@
     font-size: 0.75rem;
   }
   
-  .logoText {
-    font-size: 0.9rem;
+  .hideMobile {
+    display: none;
+  }
+
+  .logoTextFull {
+    display: none;
+  }
+
+  .logoTextMobile {
+    display: block;
+  }
+
+  .authButtonText {
+    display: none;
+  }
+
+  .authButtonEmoji {
+    display: block;
+  }
+
+  .authButton {
+    padding: 0.4rem;
+    background: transparent;
+    color: var(--copper);
   }
 }
